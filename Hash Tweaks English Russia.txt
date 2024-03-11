@@ -1,0 +1,15 @@
+Name:	Tweaks Russia.zip
+Date:	2024-03-10
+Size:	1 MB (1,664,836 bytes)
+--------
+SHA-1:	b08e58f545c2282427d494281ca99245cc139af2
+MD5:	7f22d3cb381eee9838e57632b4adeee6
+CRC32:	87c02327
+
+Name:	Tweaks English.zip
+Date:	2024-03-10
+Size:	1 MB (1,664,177 bytes)
+--------
+SHA-1:	71f0261038c5d41e2ba365f9c9469beb56401733
+MD5:	5aaa5c1d74ff2c6cb3cd5d4c6fce3162
+CRC32:	14998f23
