@@ -1,1 +1,160 @@
 Win8.1PE Win10PE Win11PE Win12PE
+Code AutoIT
+
+#NoTrayIcon
+Opt("GUIOnEventMode", 1)
+Opt("MustDeclareVars", 1)
+
+;====Tạo giao diện - GUI====
+
+;GUI rộng 590, dài 442 px
+Global $GUIMain = GUICreate("Apps WinPE", 590, 442)
+GUISetFont(12, Default, Default, "Tahoma")
+;Tạo các Nút - Button
+Global $Btn_1 = GUICtrlCreateButton("Button 1", 10, 20, 280, 40)
+Global $Btn_2 = GUICtrlCreateButton("Tweaks Launcher x64", 10, 66, 280, 40)
+Global $Btn_3 = GUICtrlCreateButton("Tweaks Launcher x86", 10, 112, 280, 40)
+Global $Btn_4 = GUICtrlCreateButton("Button 4", 10, 158, 280, 40)
+Global $Btn_5 = GUICtrlCreateButton("TeamViewer", 10, 204, 280, 40)
+Global $Btn_6 = GUICtrlCreateButton("Button 6", 10, 250, 280, 40)
+Global $Btn_7 = GUICtrlCreateButton("Button 7", 10, 296, 280, 40)
+Global $Btn_8 = GUICtrlCreateButton("Button 8", 10, 342, 280, 40)
+Global $Btn_9 = GUICtrlCreateButton("Button 9", 10, 388, 280, 40)
+Global $Btn_10 = GUICtrlCreateButton("Button 10", 300, 20, 280, 40)
+Global $Btn_11 = GUICtrlCreateButton("Button 11", 300, 66, 280, 40)
+Global $Btn_12 = GUICtrlCreateButton("Button 12", 300, 112, 280, 40)
+Global $Btn_13 = GUICtrlCreateButton("Button 13", 300, 158, 280, 40)
+Global $Btn_14 = GUICtrlCreateButton("Button 14", 300, 204, 280, 40)
+Global $Btn_15 = GUICtrlCreateButton("Button 15", 300, 250, 280, 40)
+Global $Btn_16 = GUICtrlCreateButton("Button 16", 300, 296, 280, 40)
+Global $Btn_17 = GUICtrlCreateButton("Button 17", 300, 342, 280, 40)
+Global $Btn_18 = GUICtrlCreateButton("Button 18", 300, 388, 280, 40)
+
+;Gọi hàm Fnc_Exit khi bấm nút X (đóng cửa sổ)
+GUISetOnEvent(-3, "Fnc_Exit")
+
+;Gọi các hàm tương ứng khi bấm các nút
+GUICtrlSetOnEvent($Btn_1, "Fnc_Bt1")
+GUICtrlSetOnEvent($Btn_2, "Fnc_Bt2")
+GUICtrlSetOnEvent($Btn_3, "Fnc_Bt3")
+GUICtrlSetOnEvent($Btn_4, "Fnc_Bt4")
+GUICtrlSetOnEvent($Btn_5, "Fnc_Bt5")
+GUICtrlSetOnEvent($Btn_6, "Fnc_Bt6")
+GUICtrlSetOnEvent($Btn_7, "Fnc_Bt7")
+GUICtrlSetOnEvent($Btn_8, "Fnc_Bt8")
+GUICtrlSetOnEvent($Btn_9, "Fnc_Bt9")
+GUICtrlSetOnEvent($Btn_10, "Fnc_Bt10")
+GUICtrlSetOnEvent($Btn_11, "Fnc_Bt11")
+GUICtrlSetOnEvent($Btn_12, "Fnc_Bt12")
+GUICtrlSetOnEvent($Btn_13, "Fnc_Bt13")
+GUICtrlSetOnEvent($Btn_14, "Fnc_Bt14")
+GUICtrlSetOnEvent($Btn_15, "Fnc_Bt15")
+GUICtrlSetOnEvent($Btn_16, "Fnc_Bt16")
+GUICtrlSetOnEvent($Btn_17, "Fnc_Bt17")
+GUICtrlSetOnEvent($Btn_18, "Fnc_Bt18")
+
+;Hiện GUI
+GUISetState(@SW_SHOW, $GUIMain)
+
+;Vòng lặp vô tận để giữ GUI luôn hiện
+While 1
+	Sleep(50)
+WEnd
+
+;====Các Hàm - Function====
+Func Fnc_Exit()
+	Exit
+EndFunc
+
+;Sự kiện khi nhấn Button 1
+Func Fnc_Bt1()
+	ShellExecuteWait(@HomeDrive& "\Hasher2.exe")
+EndFunc
+
+;Sự kiện khi nhấn Button 2
+Func Fnc_Bt2()
+	;MsgBox(0, "title", "Nhấn Button 2", 0, $GUIMain)
+	ShellExecute("autoit3.exe", "Launcher_x64.au3")
+EndFunc
+
+;Sự kiện khi nhấn Button 3
+Func Fnc_Bt3()
+	ShellExecute("autoit3.exe", "Launcher_x86.au3")
+	Exit
+EndFunc
+
+;Sự kiện khi nhấn Button 4
+Func Fnc_Bt4()
+	ShellExecute("C:\Tweaks\Launcher_x64.exe")
+	Exit
+EndFunc
+
+;Sự kiện khi nhấn Button 5
+Func Fnc_Bt5()
+	ShellExecute("C:\Program Files\TeamViewer\TeamViewer.exe", "", "C:\Program Files\TeamViewer")
+EndFunc
+
+;Sự kiện khi nhấn Button 6
+Func Fnc_Bt6()
+	MsgBox(0, "title", "Nhấn Button 6", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 7
+Func Fnc_Bt7()
+	MsgBox(0, "title", "Nhấn Button 7", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 8
+Func Fnc_Bt8()
+	MsgBox(0, "title", "Nhấn Button 8", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 9
+Func Fnc_Bt9()
+	MsgBox(0, "title", "Nhấn Button 9", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 10
+Func Fnc_Bt10()
+	MsgBox(0, "title", "Nhấn Button 10", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 11
+Func Fnc_Bt11()
+	MsgBox(0, "title", "Nhấn Button 11", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 12
+Func Fnc_Bt12()
+	MsgBox(0, "title", "Nhấn Button 12", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 13
+Func Fnc_Bt13()
+	MsgBox(0, "title", "Nhấn Button 13", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 14
+Func Fnc_Bt14()
+	MsgBox(0, "title", "Nhấn Button 14", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 15
+Func Fnc_Bt15()
+	MsgBox(0, "title", "Nhấn Button 15", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 16
+Func Fnc_Bt16()
+	MsgBox(0, "title", "Nhấn Button 16", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 17
+Func Fnc_Bt17()
+	MsgBox(0, "title", "Nhấn Button 17", 0, $GUIMain)
+EndFunc
+
+;Sự kiện khi nhấn Button 18
+Func Fnc_Bt18()
+	MsgBox(0, "title", "Nhấn Button 18", 0, $GUIMain)
+EndFunc
